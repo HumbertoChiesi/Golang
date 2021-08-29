@@ -2,13 +2,18 @@ package main
 
 import (
 	"fmt"
+	"time"
 )
 
 func main() {
 	canal := make(chan string)
-	escrever("Bom dia", canal)
+	go escrever("Bom dia", canal)
 
-	for mensagem := range canal {
+	for {
+		mensagem, aberto := <-canal
+		if !aberto {
+			break
+		}
 		fmt.Println(mensagem)
 	}
 
@@ -17,7 +22,7 @@ func main() {
 func escrever(txt string, canal chan string) {
 	for i := 0; i < 5; i++ {
 		canal <- txt
-		fmt.Println(txt)
+		time.Sleep(time.Second)
 	}
 
 	close(canal)
