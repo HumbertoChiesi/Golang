@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 
-	"UdemyGolang/simpleTesting/addresses"
+	"modulo/addresses"
 )
 
 func main() {
