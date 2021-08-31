@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            background-color: rgb(194, 246, 246);
+        }
+        h1 {
+            color: bisque;
+            font-size: 120px;
+            margin-left: 35%;
+        }
+        button{
+            background-color: bisque;
+            margin-left: 46%;
+            border-radius: 15%;
+            font-size: 20px;
+            padding: 40px 40px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Home page</h1>
+    <button id="botao">Click me!</button>
+
+    <script>
+        var btn = document.getElementById("botao")
+        btn.onclick = function(){
+            alert("The button was clicked succefully")
+        }
+    </script>
+</body>
+</html>
