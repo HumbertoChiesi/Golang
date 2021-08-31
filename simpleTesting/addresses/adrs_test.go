@@ -1,7 +1,12 @@
 //TESTE DE UNIDADE
-package addresses
+//go tool cover --func=coverage.txt
+//go tool cover --html=coverage.txt
+package addresses_test
 
-import "testing"
+import (
+	. "modulo/addresses"
+	"testing"
+)
 
 type testCase struct {
 	addressInput   string
